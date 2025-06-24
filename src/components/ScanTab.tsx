@@ -1,6 +1,7 @@
 
 import { Camera, Sparkles, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SkinMeIcon from "./SkinMeIcon";
 
 const ScanTab = () => {
   const handleScanProduct = () => {
@@ -17,6 +18,9 @@ const ScanTab = () => {
       <div className="absolute bottom-40 right-8 w-7 h-7 bg-green-200 rounded-full animate-pulse delay-200 opacity-60"></div>
       
       <div className="text-center mb-12 animate-fade-in">
+        <div className="flex items-center justify-center mb-6">
+          <SkinMeIcon size={48} />
+        </div>
         <div className="flex items-center justify-center mb-4">
           <h1 className="text-3xl font-light text-gray-800">
             Welcome to <span className="font-semibold text-pink-600 relative">
