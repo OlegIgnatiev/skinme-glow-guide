@@ -49,53 +49,53 @@ const ProductsTab = () => {
   const [activeSection, setActiveSection] = useState("scanned");
 
   return (
-    <div className="p-4 h-full overflow-y-auto relative">
+    <div className="p-5 h-full overflow-y-auto relative">
       {/* Cute floating decorations */}
-      <div className="absolute top-4 right-6 w-5 h-5 bg-pink-200 rounded-full animate-pulse opacity-50"></div>
-      <div className="absolute top-10 left-4 w-3 h-3 bg-yellow-200 rounded-full animate-bounce opacity-60"></div>
+      <div className="absolute top-4 right-6 w-6 h-6 bg-pink-200 rounded-full animate-pulse opacity-50"></div>
+      <div className="absolute top-10 left-4 w-4 h-4 bg-yellow-200 rounded-full animate-bounce opacity-60"></div>
       
-      <div className="text-center mb-6">
-        <h1 className="text-xl font-light text-gray-800 flex items-center justify-center">
+      <div className="text-center mb-8">
+        <h1 className="text-2xl font-light text-gray-800 flex items-center justify-center">
           Your Products
-          <Package size={20} className="ml-2 text-pink-500" />
-          <Sparkles size={16} className="ml-1 text-purple-400 animate-pulse" />
+          <Package size={24} className="ml-3 text-pink-500" />
+          <Sparkles size={20} className="ml-2 text-purple-400 animate-pulse" />
         </h1>
-        <p className="text-sm text-gray-500 mt-1">Your beauty collection ✨💕</p>
+        <p className="text-base text-gray-500 mt-2">Your beauty collection ✨💕</p>
       </div>
       
       {/* Section Toggle */}
-      <div className="flex bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-1 mb-6 border-2 border-pink-100">
+      <div className="flex bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-1 mb-8 border-2 border-pink-100">
         <button
           onClick={() => setActiveSection("scanned")}
-          className={`flex-1 py-3 px-3 rounded-xl text-sm font-medium transition-all duration-300 flex items-center justify-center ${
+          className={`flex-1 py-4 px-4 rounded-xl text-base font-medium transition-all duration-300 flex items-center justify-center ${
             activeSection === "scanned"
               ? "bg-white text-pink-600 shadow-md border-2 border-pink-200"
               : "text-gray-600 hover:text-pink-500"
           }`}
         >
-          <span className="mr-1">📱</span>
+          <span className="mr-2 text-lg">📱</span>
           Scanned
         </button>
         <button
           onClick={() => setActiveSection("recommended")}
-          className={`flex-1 py-3 px-3 rounded-xl text-sm font-medium transition-all duration-300 flex items-center justify-center ${
+          className={`flex-1 py-4 px-4 rounded-xl text-base font-medium transition-all duration-300 flex items-center justify-center ${
             activeSection === "recommended"
               ? "bg-white text-pink-600 shadow-md border-2 border-pink-200"
               : "text-gray-600 hover:text-pink-500"
           }`}
         >
-          <span className="mr-1">💝</span>
+          <span className="mr-2 text-lg">💝</span>
           Recommended
         </button>
       </div>
 
       {/* Products Grid */}
-      <div className="space-y-4">
+      <div className="space-y-5">
         {activeSection === "scanned" && (
           <div className="animate-fade-in">
-            <div className="flex items-center mb-3">
-              <span className="text-sm font-medium text-gray-600">Recently scanned</span>
-              <span className="ml-2 text-pink-400">🔍✨</span>
+            <div className="flex items-center mb-4">
+              <span className="text-base font-medium text-gray-600">Recently scanned</span>
+              <span className="ml-3 text-pink-400 text-lg">🔍✨</span>
             </div>
             {mockScannedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
@@ -105,9 +105,9 @@ const ProductsTab = () => {
         
         {activeSection === "recommended" && (
           <div className="animate-fade-in">
-            <div className="flex items-center mb-3">
-              <span className="text-sm font-medium text-gray-600">Perfect for you</span>
-              <span className="ml-2 text-purple-400">💖🌟</span>
+            <div className="flex items-center mb-4">
+              <span className="text-base font-medium text-gray-600">Perfect for you</span>
+              <span className="ml-3 text-purple-400 text-lg">💖🌟</span>
             </div>
             {mockRecommendedProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
